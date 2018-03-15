@@ -1,0 +1,7 @@
+AMQP_URI: pyamqp://${RABBITMQ_USER}:${RABBITMQ_PASSWORD}@${RABBITMQ_HOST}:${RABBITMQ_PORT}
+WEB_SERVER_ADDRESS: '0.0.0.0:5000'
+# rpc_exchange: 'ms-queue'
+max_workers: 10
+parent_calls_tracked: 10
+
+MONGODB_CONNECTION_URL: ${MONGODB_CONNECTION_URL}

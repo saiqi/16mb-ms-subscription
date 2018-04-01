@@ -28,6 +28,4 @@ class SubscriptionManagerService(object):
     @rpc
     def get_subscription_by_user(self, user):
         cursor = self.database.subscriptions.find_one({'user': user}, {'_id': 0})
-        if not cursor:
-            raise SubscriptionError('No subscription found for user {}'.format(user))
         return bson.json_util.dumps(cursor)

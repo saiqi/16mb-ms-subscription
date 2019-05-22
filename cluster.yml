@@ -8,8 +8,13 @@ MONGODB_CONNECTION_URL: ${MONGODB_CONNECTION_URL}
 
 LOGGING:
     version: 1
+    formatters:
+        standard: 
+            format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
     handlers:
         console:
+            level: INFO
+            formatter: standard
             class: logging.StreamHandler
     root:
         level: INFO
